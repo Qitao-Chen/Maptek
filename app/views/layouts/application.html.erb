@@ -10,11 +10,16 @@
   </head>
 
   <body>
-
+<div>
   <%= image_tag("logos/Maptek_logo.png") %>
-  <%= link_to "  <p style='color: white;'>home</p>
+  <%= link_to "  <p style='color: white;'>Home</p>
 ".html_safe, root_path %>
-   <%= link_to "<p style='color: black;'>Contact Us</p>
+
+  <%= link_to "https://www.maptek.com/about_maptek/index.html" do %>
+  <p style='color: white;'>About us</p>
+    <%end %>
+
+   <%= link_to "<p style='color: white;'>Contact us</p>
 ".html_safe,"https://www.maptek.com/contact/index.html/" %>
 
 
@@ -24,7 +29,7 @@
     <%#= text_field_tag(:q) %>
     <%#= submit_tag("Search") %>
   <%# end %>
-
+</div>
   <%= yield %>
   </body>
 </html>
