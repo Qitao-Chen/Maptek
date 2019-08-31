@@ -1,0 +1,40 @@
+<h1 style="color: gold">Register your new account</h1>
+
+
+
+
+<p>Name:</p><%= text_field(:person, :name) %>
+
+<p>Email Address:</p><%= text_field(:person, :email_field) %>
+<p>What position you want to apply?(multiple-choice)</p>
+
+<%= check_box_tag(:job_font) %>
+<%= label_tag(:job_font, "Font-end") %>
+<%= check_box_tag(:job_back) %>
+<%= label_tag(:job_back, "Back-end") %>
+<%= check_box_tag(:job_data) %>
+<%= label_tag(:job_data, "Data-analyse") %>
+<%= check_box_tag(:job_design) %>
+<%= label_tag(:job_design, "Web-design") %>
+
+<%#= radio_button_tag(:job, "font-end") %>
+<%#= label_tag(:job_font, "Font-end") %>
+<%#= radio_button_tag(:job, "back-end") %>
+<%#= label_tag(:age_back, "Back-end") %>
+<%#= radio_button_tag(:job, "data-analyse") %>
+<%#= label_tag(:age_data, "Data-analyse") %>
+<p>(This is an optional question)</p>
+<%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:age, "adult") %>
+<%= label_tag(:age_adult, "I'm over 21") %>
+<%= radio_button_tag(:age, "adult+") %>
+<%= label_tag(:age_adult, "I'm over 35") %>
+
+
+
+<p><%=button_tag "Submit" %></p>
+
+
+
+

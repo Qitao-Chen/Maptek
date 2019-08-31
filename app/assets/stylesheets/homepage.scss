@@ -1,0 +1,15 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here:
+html {
+  color: black;
+  background: hsl(50, 1%, 55%);
+}
+.title{
+  color:powderblue;
+}
+
+//<%image_tag("Maptek_logo.png") %>
+//<%= image_tag("Maptek_logo.png", :alt => "rss feed") %>
+//<img src="/Users/chenjiajia/Maptek/images/Maptek_logo.png" alt="logo" />
+//<img alt="Maptek logo" src="/Users/chenjiajia/Maptek/assets/Maptek_logo.png" />

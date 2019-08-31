@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maptek Hiring</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <%= image_tag("logos/Maptek_logo.png") %>
+  <%= link_to "  <p style='color: white;'>home</p>
+".html_safe, root_path %>
+   <%= link_to "<p style='color: black;'>Contact Us</p>
+".html_safe,"https://www.maptek.com/contact/index.html/" %>
+
+
+
+  <%#= form_tag("/search", method: "get") do %>
+    <%#= label_tag(:q, "Search for:") %>
+    <%#= text_field_tag(:q) %>
+    <%#= submit_tag("Search") %>
+  <%# end %>
+
+  <%= yield %>
+  </body>
+</html>
