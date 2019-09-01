@@ -4,32 +4,51 @@
     <title>Maptek Hiring</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-<div>
-  <%= image_tag("logos/Maptek_logo.png") %>
-  <%= link_to "  <p style='color: white;'>Home</p>
+<!--<div>-->
+<!-- <%= link_to "  <p style='color: black;'>Home</p>-->
 ".html_safe, root_path %>
 
-  <%= link_to "https://www.maptek.com/about_maptek/index.html" do %>
-  <p style='color: white;'>About us</p>
-    <%end %>
+  <%#= link_to "https://www.maptek.com/about_maptek/index.html" do %>
+<!-- <p style='color:black;'>About us</p>-->
+    <%#end %>
 
-   <%= link_to "<p style='color: white;'>Contact us</p>
+<!--<%= link_to "<p style='color: black;'>Contact us</p>-->
 ".html_safe,"https://www.maptek.com/contact/index.html/" %>
-
-8888888888888
-
+<!--</div>-->
   <%#= form_tag("/search", method: "get") do %>
     <%#= label_tag(:q, "Search for:") %>
     <%#= text_field_tag(:q) %>
     <%#= submit_tag("Search") %>
   <%# end %>
+
+<nav class="navbar navbar-dark bg-dark"></nav>
+<div class="card text-center">
+  <div class="card-header" style="background-color: darkgray;">
+    <%= image_tag("logos/Maptek_logo.png") %>
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.maptek.com/about_maptek/index.html">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.maptek.com/contact/index.html" tabindex="-1" aria-disabled="true">Contect us</a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+
   <%= yield %>
   </body>
+
 </html>

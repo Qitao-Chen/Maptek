@@ -1,2 +1,10 @@
-<p>User name:</p>
-<p>Password:</p>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p>Email Address:</p><%= text_field(:person, :email_field) %>
+    <p>Password:</p><%= password_field_tag(:password) %>
+
+    <p><%= button_tag "Login" %></p>
+  </div>
+</div>
+
