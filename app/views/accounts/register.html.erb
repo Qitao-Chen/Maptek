@@ -1,0 +1,38 @@
+<div class="jumbotron jumbotron-fluid">
+  <h2 style="color: lightseagreen">Start your new trip on Maptek</h2>
+  <div class="Register-form-container clearfix">
+  <div class="Register-form">
+    <%= form_for @account,url:"/create_account" do |f| %>
+      <dl class="form">
+        <dt><%= f.label :name, "User Name(less than ten characters)" %></dt>
+        <dd><%= f.text_field :name %></dd>
+
+
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :email %></dt>
+        <dd><%= f.text_field :email %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :password, "Password" %></dt>
+        <dd><%= f.password_field :password %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :password_confirmation, "Confirm Password" %></dt>
+        <dd><%= f.password_field :password_confirmation %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :role, "Role" %></dt>
+        <dd>
+          <select name="account[role]" class="form-control" >
+            <% Account::ROLE.each do |ro| %>
+              <option value= "<%= ro[0] %>"><%= ro[1] %></option>
+            <% end %>
+          </select>
+        </dd>
+      </dl>
+      <p><%= f.submit "Register", :class => "Register-button btn btn-primary" %></p>
+    <% end %>
+  </div>
+</div>
+</div>

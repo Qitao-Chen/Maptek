@@ -3,40 +3,68 @@
 
 
 
-<p>Name:</p><%= text_field(:person, :name) %>
+<!--<p>Name:</p><%#= text_field(:person, :name) %>-->
 
-<p>Email Address:</p><%= text_field(:person, :email_field) %>
-<p>Password:</p><%= password_field_tag(:password) %>
-<p>Confirm password:</p><%= password_field_tag(:password) %>
-<p>What position you want to apply?(multiple-choice)</p>
+<!--<p>Email Address:</p><%#= text_field(:person, :email_field) %>-->
+<!--<p>Password:</p><%#= password_field_tag(:password) %>-->
+<!--<p>Confirm password:</p><%#= password_field_tag(:password) %>-->
+<!--<p>What position you want to apply?(multiple-choice)</p>-->
 
-<%= check_box_tag(:job_font) %>
-<%= label_tag(:job_font, "Software Engineering") %>
-<%= check_box_tag(:job_back) %>
-<%= label_tag(:job_back, "System Architecture") %>
-<%= check_box_tag(:job_data) %>
-<%= label_tag(:job_data, "Data Analysis") %>
-<%= check_box_tag(:job_design) %>
-<%= label_tag(:job_design, "Web Development") %>
+<%#= check_box_tag(:job_font) %>
+<%#= label_tag(:job_font, "Software Engineering") %>
+<%#= check_box_tag(:job_back) %>
+<%#= label_tag(:job_back, "System Architecture") %>
+<%#= check_box_tag(:job_data) %>
+<%#= label_tag(:job_data, "Data Analysis") %>
+<%#= check_box_tag(:job_design) %>
+<%#= label_tag(:job_design, "Web Development") %>
 
-<%#= radio_button_tag(:job, "font-end") %>
-<%#= label_tag(:job_font, "Font-end") %>
-<%#= radio_button_tag(:job, "back-end") %>
-<%#= label_tag(:age_back, "Back-end") %>
-<%#= radio_button_tag(:job, "data-analyse") %>
-<%#= label_tag(:age_data, "Data-analyse") %>
-<p>(This is an optional question)</p>
-<%= radio_button_tag(:age, "child") %>
-<%= label_tag(:age_child, "I am younger than 21") %>
-<%= radio_button_tag(:age, "adult") %>
-<%= label_tag(:age_adult, "I'm over 21") %>
-<%= radio_button_tag(:age, "adult+") %>
-<%= label_tag(:age_adult, "I'm over 35") %>
+<!--<p>(This is an optional question)</p>-->
+<%#= radio_button_tag(:age, "child") %>
+<%#= label_tag(:age_child, "I am younger than 21") %>
+<%#= radio_button_tag(:age, "adult") %>
+<%#= label_tag(:age_adult, "I'm over 21") %>
+<%#= radio_button_tag(:age, "adult+") %>
+<%#= label_tag(:age_adult, "I'm over 35") %>
 
 
 
-<p><%=button_tag "Submit" %></p>
+<!--<p><%#=button_tag "Submit" %></p>-->
 
+
+<div class="Register-form-container clearfix">
+  <div class="Register-form">
+    <%= form_for @account,url:"/create_account" do |f| %>
+      <dl class="form">
+        <dt><%= f.label :name, "User Name(less than ten characters)" %></dt>
+        <dd><%= f.text_field :name %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :email %></dt>
+        <dd><%= f.text_field :email %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :password, "Password" %></dt>
+        <dd><%= f.password_field :password %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :password_confirmation, "Confirm Password" %></dt>
+        <dd><%= f.password_field :password_confirmation %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label :role, "Role" %></dt>
+        <dd>
+          <select name="account[role]" class="form-control" >
+            <% Account::ROLE.each do |ro| %>
+              <option value= "<%= ro[0] %>"><%= ro[1] %></option>
+            <% end %>
+          </select>
+        </dd>
+      </dl>
+      <p><%= f.submit "Register", :class => "Register-button btn btn-primary" %></p>
+    <% end %>
+  </div>
+</div>
 
 
 

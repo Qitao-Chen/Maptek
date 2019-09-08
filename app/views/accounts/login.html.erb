@@ -1,0 +1,37 @@
+<!--<div class="jumbotron jumbotron-fluid">-->
+<!--  <div class="container">-->
+<!--    <p>Email Address:</p><%#= text_field_tag(:email, params[:email]) %><br />-->
+<!--    <p>Password:</p><%#= password_field_tag(:password, params[:password]) %><br />-->
+
+<!--    <dd><%#= submit_tag "Login" %></dd><br />-->
+<!--    <div class="need-login">-->
+      <%#= link_to "Do not have account? register now！", "/register" %>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="jumbotron jumbotron-fluid">
+<div class="Login-form-container">
+  <div class="Login-form">
+    <%= form_tag "/create_login" do %>
+      <dl class="form">
+        <dt>
+          <%= label_tag"Email" %>
+        </dt>
+        <dd>
+          <%= text_field_tag :email,params[:email] %>
+        </dd>
+      </dl>
+      <dl class="form">
+        <dt>
+          <%= label_tag"password" %>
+        </dt>
+        <dd>
+          <%= password_field_tag :password,params[:password] %>
+        </dd>
+      </dl>
+      <p><%= submit_tag "Login", :class=>"login-button btn btn-primary" %></p>
+      <% end %>
+      </div>
+  </div>
+</div>

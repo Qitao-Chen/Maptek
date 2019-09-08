@@ -1,14 +1,16 @@
 class HomepageController < ApplicationController
   def index
-    @str1 = "Login"
+    @str1 = "say"
   end
 
-  def login
+  # def login
+  #
+  # end
+  # def register
+  #
+  # end
 
-  end
-  def register
 
-  end
 
 
 
