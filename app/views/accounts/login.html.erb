@@ -9,7 +9,14 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
-
+<div class="container">
+  <% flash.each do |name,msg|  %>
+    <div class='alert alert-danger'>
+      <%= name %>
+      <%= msg %>
+    </div>
+  <% end %>
+</div>
 <div class="jumbotron jumbotron-fluid">
 <div class="Login-form-container">
   <div class="Login-form">
@@ -35,3 +42,9 @@
       </div>
   </div>
 </div>
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>

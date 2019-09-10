@@ -1,8 +1,31 @@
 <div class="jumbotron jumbotron-fluid">
   <h1 style = "color: darkorange">Welcome to Administrator Page</h1>
   <p>In this page, you can manage the exam for candidates，review the exam and edit the questions !</p>
-  <a class="btn btn-primary" href="homepage/index" role="button">Choose Candidates</a>
-  <a class="btn btn-primary" href="homepage/index" role="button">Review Exam</a>
-  <a class="btn btn-primary" href="homepage/index" role="button">Edit Questions</a>
+  <a class="btn btn-primary" href="/homepage/test" role="button">Choose Candidates</a>
+  <a class="btn btn-primary" href="/accounts/test" role="button">Review Exam</a>
+  <a class="btn btn-primary" href="/homepage/test" role="button">Edit Questions</a>
+  <h3>Candidates Email Address:</h3>
+<!--  <p>-->
+    <%# Account.all.each do |email| %>
+    <%#= email.email%>
+  <%# end %>
+<!--  </p>-->
+
+  <table>
+    <tr>
+      <th>Candidates</th>
+
+    </tr>
+    <% Account.all.each do |account| %>
+      <tr>
+        <td>  <%= check_box_tag(:candidates,"email") %></td>
+
+        <td ><d style="color: orangered">User name  </d><%= account.name %></td>
+        <td><d style="color: orangered">Email address </d><%= account.email %></td>
+      </tr>
+    <% end %>
+  </table>
+
+
 
 </div>
